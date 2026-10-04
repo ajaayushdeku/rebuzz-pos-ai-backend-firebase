@@ -1,0 +1,25 @@
+{
+  "name": "rebuzz-ai-service",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stores each business's own AI provider key (Gemini or OpenRouter) and makes model calls on their behalf.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env app.js",
+    "start": "node --env-file=.env app.js",
+    "verify:firestore": "node --env-file=.env scripts/verify-firestore.js",
+    "ttl:enable": "node --env-file=.env scripts/enable-ttl.js",
+    "cache:prune": "node --env-file=.env scripts/prune-cache.js",
+    "smoke": "node --env-file=.env scripts/smoke.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.34.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^14.5.0",
+    "google-auth-library": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

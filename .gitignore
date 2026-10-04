@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+*.log
+dist/
+coverage/
+list-models.mjs
+
+# Firebase service-account keys, in case one is dropped in here rather than
+# kept outside the repo. A private key committed once stays in history even
+# after it is deleted, so these are listed before any key file exists.
+*-firebase-adminsdk-*.json
+serviceAccount*.json
+service-account*.json
+*.private-key.json
